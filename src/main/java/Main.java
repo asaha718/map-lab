@@ -58,8 +58,5 @@ public class Main {
             System.out.println("Sorry that book is not in our library");
         }
 
-        if (scanner.hasNextLine()) {
-            scanner.nextLine();
-        }
     }
 }
