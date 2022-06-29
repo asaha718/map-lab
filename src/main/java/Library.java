@@ -1,14 +1,14 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class Library {
-    private static List<Book> listOfBooks = new ArrayList<>();
+    private static HashMap<String, Book> collectionOfBooks = new HashMap<>();
 
-    public static List<Book> showLibrary() {
-        return Library.listOfBooks;
+    public static HashMap<String, Book> showLibraryCollection() {
+        return Library.collectionOfBooks;
     }
 
-    public static void addBook(Book book) {
-        Library.listOfBooks.add(book);
+    public static void addBook(String title, Book book) {
+        Library.collectionOfBooks.put(title, book);
     }
+
 }
