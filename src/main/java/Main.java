@@ -2,21 +2,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Boolean value = true; 
         try (Scanner scanner = new Scanner(System.in)) {
-            while (true) {
+            while (value) {
                 System.out.println("Would you like to ADD a Book(1) or Look up an Existing Book(2)?");
 
                 String userInput = scanner.nextLine();
                 if (userInput.equals("1")) {
                     getBookInput();
+                    value = false; 
                 } else if (userInput.equals("2")){
                     lookUpBook();
+                    value = false; 
                 }
+                
+                value = true; 
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } 
 
     }
 
